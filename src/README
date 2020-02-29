@@ -1,0 +1,11 @@
+BAJENARU CATALIN
+311CB
+
+Idee implementare: o lista de celule in care se retine un sistem Hanoi alcatuit dintr-un string pt culoare, un int care indica daca a fost construita coada, un int pentru numarul de discuri, 3 stive si o coada. O coada/stiva e alcatuita din celule TLista.
+In functia add este parcursa lista de celule in care se cauta culoarea primita ca argument. Daca nu exista se aloca o noua celula, si se apeleaza functia de initializare a unui sistem Hanoi(initsist) pt a-i aloca memorie, setarea pointerilor de la stive si cozi cu NULL etc. Se apeleaza functia de adaugare a unui nou disc(addisc).
+In addisc se prelucreaza stiva primita ca parametru astfel incat noul disc sa ajunga pe pozitia dorita. Intr-un while sunt adaugate toate elementele stivei primite ca parametru in alta stiva, iar cand marimea noului disc este mai mica decat cea a discului din stiva initiala se adauga acesta in stiva auxiliara, deci la final trebuie rasturnata stiva auxiliara in stiva data ca parametru.
+Functia show: intai se verifica existenta culorii primite ca parametru, daca exista se inverseaza stiva(pentru a pune discul cel mai mare in varful stivei) se afiseaza stiva si se recladeste stiva initiala; operatiile sunt facute pt toate cele 3 stive;
+Atat in functia play cat si in functia show_moves la inceput se verifica daca culoarea primita ca parametru exista in lista, apoi se verifica daca coada corespunzatoare acelui sistem Hanoi a fost construita. Daca coada nu a fost alcatuita inca este chemata functia mutarihan care realizeaza coada. In cazul functiei show_moves trebuie pastrate mutarile pentru a reconstrui coada. In functia play sunt efectuate mutarile in stive si sunt eliminate din coada.
+Functia mutarihan produce mutarile corespunzatoare cu n discuri si le pune intr-o coada primita ca parametru.
+In main sunt citite comenzile si chemate functiile aferente lor.
+La finalul programului este chemata functia eliberare care dealoca memoria care inca nu a fost dealocata.
